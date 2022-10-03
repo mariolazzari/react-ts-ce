@@ -12,11 +12,11 @@ const LoggedIn = () => {
   };
 
   return (
-    <div>
+    <>
       <h2>User is logged {isLoggedIn ? "In" : "Out"}</h2>
       <button onClick={onLogin}>Login</button>
       <button onClick={onLogout}>Logout</button>
-    </div>
+    </>
   );
 };
 
