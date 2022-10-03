@@ -2,6 +2,9 @@ import "./App.css";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Oscar from "./components/Oscar";
+import Heading from "./components/Heading";
 
 function App() {
   const person = {
@@ -18,9 +21,13 @@ function App() {
   return (
     <div className="App">
       <Greet name="Mario" messageCount={10} isLoggedIn={true} />
-      <Greet name="Mariarosa" messageCount={100} isLoggedIn={false} />
+      <Greet name="Mariarosa" isLoggedIn={false} />
       <Person name={person} />
       <PersonList names={names} />
+      <Status status="loading" />
+      <Oscar>
+        <Heading>Oscar goes to... Mario!</Heading>
+      </Oscar>
     </div>
   );
 }
