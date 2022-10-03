@@ -6,16 +6,11 @@ type InputProps = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input = (props: InputProps) => {
+const Input = ({ label, value, onChange }: InputProps) => {
   return (
     <div>
-      <label htmlFor="input">{props.label}</label>
-      <input
-        id="input"
-        type="text"
-        onChange={props.onChange}
-        value={props.value}
-      />
+      <label htmlFor="input">{label}</label>
+      <input id="input" type="text" onChange={onChange} value={value} />
     </div>
   );
 };

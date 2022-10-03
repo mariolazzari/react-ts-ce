@@ -8,6 +8,7 @@ import Oscar from "./components/Oscar";
 import Heading from "./components/Heading";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Container from "./components/Container";
 
 const App = () => {
   const [value, setValue] = useState("");
@@ -48,6 +49,14 @@ const App = () => {
 
       <Button onClick={onButtonClick} />
       <Input label="Enter value" value={value} onChange={onInputChange} />
+
+      <Container
+        styles={{
+          border: "1px solid black",
+          padding: "1rem",
+          margin: "1rem 0",
+        }}
+      />
     </div>
   );
 };
