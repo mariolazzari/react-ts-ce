@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, ChangeEvent, MouseEvent } from "react";
 import "./App.css";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
@@ -10,6 +10,8 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
 import Counter from "./components/Counter";
+import ContextBox from "./context/Box";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 const person = {
   first: "Mario",
@@ -31,14 +33,11 @@ const App = () => {
     margin: "1rem 0",
   };
 
-  const onButtonClick = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    id: number
-  ) => {
+  const onButtonClick = (e: MouseEvent<HTMLButtonElement>, id: number) => {
     console.log("click", e, id);
   };
 
-  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -60,6 +59,10 @@ const App = () => {
       <Container styles={styles} />
 
       <Counter />
+
+      <ThemeContextProvider>
+        <ContextBox />
+      </ThemeContextProvider>
     </div>
   );
 };
