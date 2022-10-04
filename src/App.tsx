@@ -9,20 +9,27 @@ import Heading from "./components/Heading";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
+import Counter from "./components/Counter";
+
+const person = {
+  first: "Mario",
+  last: "Lazzari",
+};
+
+const names = [
+  { first: "First 1", last: "Last 1" },
+  { first: "First 2", last: "Last 2" },
+  { first: "First 3", last: "Last 3" },
+];
 
 const App = () => {
   const [value, setValue] = useState("");
 
-  const person = {
-    first: "Mario",
-    last: "Lazzari",
+  const styles = {
+    border: "1px solid black",
+    padding: "1rem",
+    margin: "1rem 0",
   };
-
-  const names = [
-    { first: "First 1", last: "Last 1" },
-    { first: "First 2", last: "Last 2" },
-    { first: "First 3", last: "Last 3" },
-  ];
 
   const onButtonClick = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -50,13 +57,9 @@ const App = () => {
       <Button onClick={onButtonClick} />
       <Input label="Enter value" value={value} onChange={onInputChange} />
 
-      <Container
-        styles={{
-          border: "1px solid black",
-          padding: "1rem",
-          margin: "1rem 0",
-        }}
-      />
+      <Container styles={styles} />
+
+      <Counter />
     </div>
   );
 };
