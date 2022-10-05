@@ -12,6 +12,8 @@ import Container from "./components/Container";
 import Counter from "./components/Counter";
 import ContextBox from "./context/Box";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import { UserProvider } from "./context/UserContext";
+import User from "./context/User";
 
 const person = {
   first: "Mario",
@@ -63,6 +65,10 @@ const App = () => {
       <ThemeContextProvider>
         <ContextBox />
       </ThemeContextProvider>
+
+      <UserProvider>
+        <User />
+      </UserProvider>
     </div>
   );
 };
