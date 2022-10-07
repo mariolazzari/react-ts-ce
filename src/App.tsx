@@ -14,6 +14,8 @@ import ContextBox from "./context/Box";
 import { ThemeContextProvider } from "./context/ThemeContext";
 import { UserProvider } from "./context/UserContext";
 import User from "./context/User";
+import { Private, Profile } from "./auth";
+import List from "./generics/List";
 
 const person = {
   first: "Mario",
@@ -69,6 +71,25 @@ const App = () => {
       <UserProvider>
         <User />
       </UserProvider>
+
+      <Private isLoggedIn Component={Profile} />
+
+      <List
+        items={[
+          { id: 0, value: "Mario" },
+          { id: 1, value: "Mariarosa" },
+          { id: 2, value: "Maria" },
+        ]}
+        onClick={item => console.log(item)}
+      />
+      <List
+        items={[
+          { id: 1, value: "1" },
+          { id: 2, value: "2" },
+          { id: 3, value: "3" },
+        ]}
+        onClick={item => console.log(item)}
+      />
     </div>
   );
 };

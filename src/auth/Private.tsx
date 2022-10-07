@@ -3,7 +3,7 @@ import { ProfileType } from "./Profile";
 
 type PrivateType = {
   isLoggedIn: boolean;
-  Component: React.ComponentType<ProfileType>;
+  Component: React.FC<ProfileType>;
 };
 
 function Private({ isLoggedIn, Component }: PrivateType) {
