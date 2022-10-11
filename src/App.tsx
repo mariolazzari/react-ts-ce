@@ -19,6 +19,7 @@ import List from "./generics/List";
 import RandomNumber from "./restriction/RandomNumber";
 import Toast from "./templateLitterals/Toast";
 import MyButton from "./html/MyButton";
+import Text from "./polimorphic/Text";
 
 const person = {
   first: "Mario",
@@ -101,6 +102,16 @@ const App = () => {
       <MyButton variant="primary" onClick={() => console.log("click")}>
         Primary
       </MyButton>
+
+      <Text as="h1" size="lg">
+        h1
+      </Text>
+      <Text as="h2" size="md">
+        h2
+      </Text>
+      <Text as="p" size="sm">
+        p
+      </Text>
     </div>
   );
 };
