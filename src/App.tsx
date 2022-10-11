@@ -16,6 +16,7 @@ import { UserProvider } from "./context/UserContext";
 import User from "./context/User";
 import { Private, Profile } from "./auth";
 import List from "./generics/List";
+import RandomNumber from "./restriction/RandomNumber";
 
 const person = {
   first: "Mario",
@@ -90,6 +91,8 @@ const App = () => {
         ]}
         onClick={item => console.log(item)}
       />
+
+      <RandomNumber value={10} isPositive />
     </div>
   );
 };

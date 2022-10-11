@@ -3,10 +3,12 @@ type ListProps<T> = {
   onClick: (value: T) => void;
 };
 
-const List = <T extends { id: number; value: string }>({
-  items,
-  onClick,
-}: ListProps<T>) => {
+type ItemType = {
+  id: number;
+  value: string;
+};
+
+const List = <T extends ItemType>({ items, onClick }: ListProps<T>) => {
   return (
     <div>
       <h2>List on items</h2>
