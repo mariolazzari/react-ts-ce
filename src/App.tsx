@@ -17,6 +17,8 @@ import User from "./context/User";
 import { Private, Profile } from "./auth";
 import List from "./generics/List";
 import RandomNumber from "./restriction/RandomNumber";
+import Toast from "./templateLitterals/Toast";
+import MyButton from "./html/MyButton";
 
 const person = {
   first: "Mario",
@@ -93,6 +95,12 @@ const App = () => {
       />
 
       <RandomNumber value={10} isPositive />
+
+      <Toast position="center" />
+
+      <MyButton variant="primary" onClick={() => console.log("click")}>
+        Primary
+      </MyButton>
     </div>
   );
 };
